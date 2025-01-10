@@ -7,7 +7,6 @@
                 </div>
             </div>
             <div class="col-md-5 col-lg-3">
-
             </div>
             <div class="col-md-7 col-lg-4">
                 <ul class="header-top-list">
@@ -58,17 +57,34 @@
                         <?php
                         if (!empty($category)) {
                             foreach ($category as $row) {
+                                $subcat = $this->CommonModal->getRowByMoreId('sub_category', ['cat_id' => $row['category_id']]);
                                 ?>
                                 <li class="navbar-item dropdown">
-                                    <a class="navbar-link" href="<?= base_url('type/' . $row['category_id']) ?>">
+                                    <a class="navbar-link dropdown-arrow" href="<?= base_url('type/' . $row['category_id']) ?>">
                                         <?= $row['cat_name']; ?>
                                     </a>
+                                    <?php
+                                    if ($subcat) { ?>
+                                        <ul class="dropdown-position-list">
+                                            <?php
+                                            foreach ($subcat as $sub) { ?>
+                                                <li>
+                                                    <a href="#"><?= $sub['subcat_name'] ?></a>
+                                                </li>
+                                                <?php
+                                            }
+                                            ?>
+                                        </ul>
+                                    <?php } else {
+                                    } ?>
                                 </li>
+
                                 <?php
                             }
-                            unset($row);
+                            unset($row); // Unset the row after the loop to free up memory
                         }
                         ?>
+
                         <li class="navbar-item dropdown">
                             <a class="navbar-link" href="<?= base_url('contact') ?>">Contact</a>
                         </li>
@@ -135,10 +151,10 @@
         <button class="cart-close"><i class="icofont-close"></i></button>
     </div>
     <div id="cart"></div>
-   
-        <div class="cart-footer" id="guestCheckoutBtnWrapper">
-            
-        </div>
+
+    <div class="cart-footer" id="guestCheckoutBtnWrapper">
+
+    </div>
 
 </aside>
 
