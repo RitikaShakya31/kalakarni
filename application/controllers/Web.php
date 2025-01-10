@@ -13,15 +13,12 @@ class Web extends CI_Controller
     {
         $data['category'] = $this->CommonModal->getRowByMoreIdInOrder('category', array('status' => '0'), 'category_id', 'desc');
         $data['budget'] = $this->CommonModal->getAllRowsInOrder('addbudget', 'id', 'desc');
-
         $data['contactdetails'] = $this->CommonModal->getRowById('contactdetails', 'cid', '1');
         $data['logo'] = 'assets/logo.png';
         $data['testimonials'] = $this->CommonModal->getAllRowsInOrder('testimonials', 'tid', 'desc');
-
         $data['banner'] = $this->CommonModal->getAllRowsInOrder('banner', 'bid', 'desc');
         $data['products'] = $this->CommonModal->getDataByIdInOrderLimit('products', array('status' => '0'), 'product_id', 'desc', 4, 0);
         $data['discounted'] = $this->CommonModal->getRowByMoreId('products', array('status' => '0', 'sale' => '1'));
-
         $data['project_name'] = 'Kalakarnii | Stiching your dreams';
         $data['title'] = 'Home';
         $this->load->view('home', $data);

@@ -17,7 +17,7 @@
   <link rel="stylesheet" href="<?= base_url(); ?>assets/admin/css/layouts/vertical/core/main.css" />
   <link rel="stylesheet" href="<?= base_url(); ?>assets/admin/css/layouts/vertical/menu-type/default.css" />
   <link rel="stylesheet" href="<?= base_url(); ?>assets/admin/css/layouts/vertical/themes/theme-j.css" />
-
+  <link rel="icon" href="<?= base_url() ?>assets/img/small.png">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
   <script src="https://cdn.ckeditor.com/4.16.2/standard-all/ckeditor.js"></script>
   <script type="application/javascript">

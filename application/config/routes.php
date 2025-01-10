@@ -24,7 +24,8 @@ $route['privacy-policy'] = 'Web/privacypolicy';
 $route['term-and-condition'] = 'Web/termscondition';
 $route['faq'] = 'Web/faq';
 
-$route['type/(:any)'] = 'Web/product_list/$1';
+// $route['type/(:any)'] = 'Web/product_list/$1';
+$route['type/(:any)/(:any)'] = 'Web/product_list/$1/$2';
 $route['product/(:any)/(:any)'] = 'Web/product/$1/$2';
 $route['product_details/(:any)/(:any)'] = 'Web/product_view/$1/$2';
 

@@ -47,7 +47,6 @@ function product($row, $r)
   $pattern = getSingleRowById('tbl_pattern', array('id' => $row['pattern']));
   $length = getSingleRowById('tbl_length', array('id' => $row['length']));
   $fabric = getSingleRowById('tbl_fabric', array('id' => $row['fabric']));
-
   echo '<div class="col-md-' . $r . ' col-xs-6 col-sm-6">
     <div class="product-card">
       <div class="product-media">
@@ -59,7 +58,7 @@ function product($row, $r)
         /></a>
       </div>
       <div class="product-content">
-        <h6 class="product-name">
+        <h6 class="product-name"> 
           <a class="d-inline" href="' . base_url('product_details/' . $row['product_id'] . '/' . url_title($row['pro_name'], 'dash', true)) . '" title="' . $row['pro_name'] . '">' . $row['pro_name'] . '</a>
         </h6>
         <h6 class="product-price">

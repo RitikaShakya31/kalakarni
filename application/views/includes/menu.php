@@ -69,7 +69,7 @@
                                             <?php
                                             foreach ($subcat as $sub) { ?>
                                                 <li>
-                                                    <a href="#"><?= $sub['subcat_name'] ?></a>
+                                                    <a href="<?= base_url('type/') . $sub['cat_id'] .'/' . $sub['sub_category_id']?>"><?= $sub['subcat_name'] ?></a>
                                                 </li>
                                                 <?php
                                             }
