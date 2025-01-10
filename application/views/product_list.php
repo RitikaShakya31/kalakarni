@@ -184,7 +184,6 @@
             var fabric = get_filter('fabric');
             var length = get_filter('length');
             var pattern = get_filter('pattern');
-
             $.ajax({
                 url: "<?= base_url('Web/filterData') ?>",
                 method: "POST",

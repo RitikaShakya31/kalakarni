@@ -1,18 +1,11 @@
 <?php
 include('includes/head.php');
-
-$length = getSingleRowById('length', array('id' => $product[0]['length']));
-$fabric = getSingleRowById('fabric', array('id' =>  $product[0]['fabric']));
-$pattern = getSingleRowById('pattern', array('id' =>  $product[0]['pattern']));
 ?>
-
-
 <div id="canvas">
     <div id="box_wrapper">
         <?php include('includes/menu.php'); ?>
         <section class="single-banner inner-section">
             <div class="container">
-                <h2><?= $product[0]['pro_name']; ?></h2>
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="<?= base_url() ?>">Home</a></li>
                     <li class="breadcrumb-item active">Product Details
@@ -73,16 +66,9 @@ $pattern = getSingleRowById('pattern', array('id' =>  $product[0]['pattern']));
             </div>
         </section>
     </div>
-
-
     <?php include('includes/footer.php'); ?>
-
 </div>
 </div>
-
 <?php include('includes/script.php'); ?>
-
 </body>
-
-
 </html>

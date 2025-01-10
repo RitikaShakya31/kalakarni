@@ -19,20 +19,15 @@
                                         <td class="product-remove">&nbsp;</td>
                                     </tr>
                                 </thead>
-
                                 <tbody id="cart_items_preview">
-
-                                   
                                 </tbody>
                             </table>
                         </div>
-
                         <div class="cart-buttons">
                             <a class="theme_button" href="<?= base_url() ?>">Countinue Shopping</a>
                             <!-- <input type="submit" class="theme_button color1" name="update_cart" value="Update Cart"> -->
                             <a class="theme_button" href="<?= base_url('checkout') ?>" class="theme_button color2">Proceed to Checkout</a>
                         </div>
-
                         <div class="cart-collaterals">
                             <div class="cart_totals">
                                 <h4>Cart Totals</h4>
@@ -57,10 +52,7 @@
                                 </table>
                             </div>
                         </div>
-
-                        
                     </div>
-
                 </div>
             </div>
         </div>
