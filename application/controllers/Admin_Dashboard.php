@@ -18,6 +18,7 @@ class Admin_Dashboard extends CI_Controller
     {
         $data['title'] = "Home";
         $data['favicon'] = base_url() . 'assets/logo.png';
+        $data['subcategory'] = $this->CommonModal->getNumRow('sub_category');
         $data['category'] = $this->CommonModal->getNumRow('category');
         $data['products'] = $this->CommonModal->getNumRow('products');
         $data['user_registration'] = $this->CommonModal->getNumRow('user_registration');
@@ -552,7 +553,6 @@ class Admin_Dashboard extends CI_Controller
 
         $data['title'] = "Products";
         $data['products'] = $this->CommonModal->getAllRowsInOrder('products' , 'product_id' , 'desc' );
-
         $this->load->view('admin/view_products', $data);
     }
 
@@ -612,6 +612,7 @@ class Admin_Dashboard extends CI_Controller
         $data['productInfo'] = $this->CommonModal->getRowById('tbl_products', 'product_id', $product_id);
          $data['productimg'] = $this->CommonModal->getRowById('products_image', 'product_id', $product_id);
         $data['category'] = $this->Dashboard_model->fetchall('category');
+        $data['sub_category'] = $this->Dashboard_model->fetchall('sub_category');
         $data['length'] = $this->CommonModal->getAllRows('length');
         $data['fabric'] = $this->CommonModal->getAllRows('fabric');
         $data['pattern'] = $this->CommonModal->getAllRows('pattern');

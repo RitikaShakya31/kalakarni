@@ -29,8 +29,8 @@
             </div>
             <a href="<?= base_url() ?>" class="header-logo"><img src="<?= base_url() ?>assets/img/logo.PNG"
                     alt="logo" /></a>
-            <form class="header-form">
-                <input type="text" placeholder="Search anything..." /><button>
+            <form class="header-form" method="get" action="<?= base_url('search') ?>">
+                <input type="text" name="searchbox" placeholder="Search anything..." /><button>
                     <i class="fas fa-search"></i>
                 </button>
             </form>
@@ -60,7 +60,7 @@
                                 $subcat = $this->CommonModal->getRowByMoreId('sub_category', ['cat_id' => $row['category_id']]);
                                 ?>
                                 <li class="navbar-item dropdown">
-                                    <a class="navbar-link dropdown-arrow" href="<?= base_url('type/' . $row['category_id']) ?>">
+                                    <a class="navbar-link dropdown-arrow" href="">
                                         <?= $row['cat_name']; ?>
                                     </a>
                                     <?php
@@ -69,7 +69,8 @@
                                             <?php
                                             foreach ($subcat as $sub) { ?>
                                                 <li>
-                                                    <a href="<?= base_url('type/') . $sub['cat_id'] .'/' . $sub['sub_category_id']?>"><?= $sub['subcat_name'] ?></a>
+                                                    <a
+                                                        href="<?= base_url('type/') . $sub['cat_id'] . '/' . $sub['sub_category_id'] ?>"><?= $sub['subcat_name'] ?></a>
                                                 </li>
                                                 <?php
                                             }

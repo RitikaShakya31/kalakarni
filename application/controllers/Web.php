@@ -51,11 +51,8 @@ class Web extends CI_Controller
         $data['project_name'] = 'Kalakarnii | Stiching your dreams';
         $data['title'] = 'Search Result';
         $search = $this->input->get('searchbox');
-
         $query = "SELECT * FROM `tbl_products` WHERE  `pro_name` LIKE '%" . trim($search) . "%'  OR `price` LIKE '%" . trim($search) . "%' OR `description` LIKE '%" . trim($search) . "%' ";
         $data['products'] = $this->CommonModal->runQuery($query);
-        // print_r( $data['products']);
-
         $this->load->view('search-data', $data);
     }
 

@@ -18,7 +18,6 @@
                     <li>
                         <a href="<?= base_url('admin_Dashboard/add_products'); ?>" class="btn btn-primary">
                             Add Product</a>
-
                     </li>
                 </ul>
 
@@ -54,7 +53,7 @@
                                             <tr>
                                                 <th>S No</th>
                                                 <th>Category</th>
-                                                <!-- <th>Sub Category Name</th> -->
+                                                <th>Sub Category Name</th>
                                                 <th>Product Name</th>
                                                 <th>On sale</th>
                                                 <th>Featured </th>
@@ -68,16 +67,22 @@
                                             $i = 1;
                                             foreach ($products as $fetchrow) {
                                                 $cat = getRowById('category', 'category_id', $fetchrow['category_id']);
+                                                $subCat = getRowById('sub_category', 'sub_category_id', $fetchrow['sub_category_id']);
 
                                                 $imgcount = getNumRows('products_image', array('product_id' => $fetchrow['product_id']));
-
                                             ?>
-
                                                 <tr>
                                                     <td><?php echo $i; ?></td>
                                                     <td>
                                                         <?php if($cat != '') { ?>
                                                         <?= $cat[0]['cat_name']; ?>
+                                                        <?php
+                                                        }
+                                                        ?>
+                                                    </td>
+                                                    <td>
+                                                        <?php if($subCat != '') { ?>
+                                                        <?= $subCat[0]['subcat_name']; ?>
                                                         <?php
                                                         }
                                                         ?>

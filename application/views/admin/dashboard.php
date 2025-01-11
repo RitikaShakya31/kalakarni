@@ -31,9 +31,20 @@
                     <?= $category ?>
                   </h5>
                   <h6 class="text-muted m-t-10">Product Category</h6>
-
-
                 </div>
+                
+              </div>
+              <div class="col-md-12 col-lg-6 col-xl-3">
+              <div class="card-body">
+                  <div class="icon-rounded icon-rounded-primary float-left m-r-20">
+                    <i class="fa fa-list-alt" aria-hidden="true"></i>
+                  </div>
+                  <h5 class="card-title m-b-5 counter" data-count="<?= $subcategory ?>">
+                    <?= $subcategory ?>
+                  </h5>
+                  <h6 class="text-muted m-t-10">Product Sub Category</h6>
+                </div>
+                
               </div>
               <div class="col-md-12 col-lg-6 col-xl-3">
                 <div class="card-body">
@@ -44,7 +55,6 @@
                     <?= $products ?>
                   </h5>
                   <h6 class="text-muted m-t-10">Product </h6>
-
                 </div>
               </div>
               <div class="col-md-12 col-lg-6 col-xl-3">
@@ -67,11 +77,8 @@
                     <?= $user_registration ?>
                   </h5>
                   <h6 class="text-muted m-t-10">Registered Users</h6>
-
                 </div>
               </div>
-            </div>
-            <div class="row m-0 col-border-xl">
               <div class="col-md-12 col-lg-6 col-xl-3">
                 <div class="card-body">
                   <div class="icon-rounded icon-rounded-info float-left m-r-20">
@@ -81,10 +88,10 @@
                     <?= $contact_query ?>
                   </h5>
                   <h6 class="text-muted m-t-10">Contact Query</h6>
-
-
                 </div>
               </div>
+            </div>
+            <div class="row m-0 col-border-xl">
               <div class="col-md-12 col-lg-6 col-xl-3">
                 <div class="card-body">
                   <div class="icon-rounded icon-rounded-success float-left m-r-20">
@@ -94,7 +101,6 @@
                     <?= $completed ?>
                   </h5>
                   <h6 class="text-muted m-t-10">Completed order </h6>
-
                 </div>
               </div>
               <div class="col-md-12 col-lg-6 col-xl-3">

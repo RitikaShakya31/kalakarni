@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html class="no-js">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -21,12 +20,9 @@
     <link rel="stylesheet" href="<?= base_url() ?>assets/css/user-auth.css" />
     <link rel="stylesheet" href="<?= base_url() ?>assets/css/orderlist.css">
     <link rel="stylesheet" href="<?= base_url() ?>assets/css/checkout.css">
-    
-
 </head>
 
 <body>
-
     <div class="modal" tabindex="-1" aria-labelledby="search_modal" id="search_modal">
         <div class="widget widget_search">
             <form class="searchform form-inline" action="<?= base_url('search') ?>">
